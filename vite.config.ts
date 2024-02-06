@@ -17,4 +17,5 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  base: 'https://angeljohank.github.io/para-mi-chicolac'
 });
