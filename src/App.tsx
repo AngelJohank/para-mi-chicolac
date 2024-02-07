@@ -13,7 +13,7 @@ const App = () => {
   const [noCount, setNoCount] = createSignal(0)
   const [time, SetTime] = createSignal('')
 
-  const yesButtonSize = () => noCount() * 20 + 16
+  const yesButtonSize = () => noCount() * 10 + 16
 
   const getNoButtonText = () => {
     const phrases = [
@@ -21,11 +21,10 @@ const App = () => {
       'No me quieres?',
       'Segura?',
       'Segurísima?',
-      'Piénsalo de nuevo',
+      'Brenda Melissa!!!',
       'Última oportunidad',
-      'Era broma',
       'Amor???',
-      'beterraga',
+      'beterraga en ensalada',
       'Piénsalo otra vez',
       'Estás completamente segura?',
       'Me soplas el ojito',
@@ -43,7 +42,7 @@ const App = () => {
   const handleNoClick = () => {
     setNoCount(size => size + 1)
     if (!yesButton) return
-    yesButton.style.width = `${yesButton.offsetWidth * 1.3}px`
+    yesButton.style.width = `${yesButton.offsetWidth * 1.05}px`
   }
 
   const handleYesClick = () => {
@@ -122,7 +121,7 @@ const App = () => {
           style={{
             'font-size': `${yesButtonSize()}px`,
           }}
-          class="block mx-auto mb-4 px-8 py-3 min-w-40 max-w-[100vw] font-semibold rounded-full bg-red-400 text-white"
+          class="text-center block mx-auto mb-4 px-8 py-3 min-w-40 font-semibold rounded bg-red-400 text-white"
         >
           Si
         </button>
@@ -130,7 +129,7 @@ const App = () => {
         <button
           type="button"
           onClick={handleNoClick}
-          class="block mx-auto inlineblock px-8 py-3 min-w-40 max-h-12 font-semibold rounded-full bg-slate-600 text-white"
+          class="block mx-auto inlineblock px-8 py-3 min-w-40 max-h-12 font-semibold rounded bg-slate-600 text-white"
         >
           {noCount() == 0 ? 'No' : getNoButtonText()}
         </button>
@@ -140,7 +139,8 @@ const App = () => {
         ¿Quieres Saber Cuánto Te Quiero?
       </p>
       <p class="text-white text-center">
-        (no importa cuánto bajes, no va a terminar)
+        hay una forma de expresar lo que no se puede medir, baja tanto como
+        quieras
       </p>
 
       <div class="flex-col items-center justify-center">

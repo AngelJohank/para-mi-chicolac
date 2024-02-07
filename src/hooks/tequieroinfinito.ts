@@ -1,32 +1,7 @@
 import {createSignal} from 'solid-js'
 
-const createMessageArray = () => {
-  const emojis = [
-    '❤️',
-    '🍄',
-    '🪼',
-    '🦓',
-    '🍣',
-    '☕',
-    '🧂',
-    '🍍',
-    '🪳',
-    '🌙',
-    '🐈',
-    '🦖',
-    '🌱',
-  ]
-  let array: string[] = []
-
-  for (let i = 0; i <= 20; i++) {
-    const selectedEmoji = Math.floor(Math.random() * emojis.length)
-    array.push(`${emojis[selectedEmoji]} mucho ${emojis[selectedEmoji]}`)
-  }
-
-  return array
-}
-
-const [mensajes, setMensajes] = createSignal(createMessageArray())
+const messageArray = createMessageArray()
+const [mensajes, setMensajes] = createSignal(messageArray)
 
 const observer = new IntersectionObserver(
   entries => {
@@ -34,11 +9,37 @@ const observer = new IntersectionObserver(
     if (!element.isIntersecting) return
 
     // add more items to the list
-    setMensajes(v => v.concat(createMessageArray()))
+    setMensajes(v => v.concat(messageArray))
   },
   {
     rootMargin: '100px',
   },
 )
+
+function createMessageArray() {
+  let messageArray: string[] = []
+  const message = 'mucho'
+  const emojis = [
+    '🍄',
+    '❤️',
+    '🐥',
+    '🍣',
+    '🍍',
+    '🦓',
+    '🧂',
+    '🪳',
+    '☕',
+    '🌙',
+    '🐈',
+    '🦖',
+    '🌱',
+  ]
+
+  for (const emoji of emojis) {
+    messageArray.push(`${emoji} ${message} ${emoji}`)
+  }
+
+  return messageArray
+}
 
 export {observer, mensajes}
