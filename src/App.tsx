@@ -139,8 +139,8 @@ const App = () => {
         ¿Quieres Saber Cuánto Te Quiero?
       </p>
       <p class="text-white text-center">
-        hay una forma de expresar lo que no se puede medir, baja tanto como
-        quieras
+        hay una forma de expresar lo que no se puede medir{' '}
+        <span class="text-center text-red-300">(baja tanto como quieras)</span>
       </p>
 
       <div class="flex-col items-center justify-center">
