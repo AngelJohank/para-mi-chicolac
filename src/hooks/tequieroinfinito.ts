@@ -14,6 +14,7 @@ const createMessageArray = () => {
     '🌙',
     '🐈',
     '🦖',
+    '🌱',
   ]
   let array: string[] = []
 
