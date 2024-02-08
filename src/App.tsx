@@ -70,7 +70,7 @@ const App = () => {
           class="w-screen h-32 object-cover rotate-180"
           style="object-position: 80% 50%;"
         />
-        <h1 class="text-5xl text-center text-white font-bold">
+        <h1 class="text-5xl text-center text-white font-bold px-4 max-w-xl mx-auto">
           Feliz Mes Fantasma <span>❤️</span>
         </h1>
 
@@ -78,7 +78,7 @@ const App = () => {
       </div>
 
       <Show when={wasYesPressed()}>
-        <div class="p-4 max-w-3xl mx-auto">
+        <div class="p-4 max-w-xl mx-auto">
           <div class="flex justify-end mb-2">
             <div class="rounded-lg py-2 px-3" style="background-color: #015d4b">
               <p class="text-sm mt-1" style="color: #e5efec">
@@ -110,7 +110,7 @@ const App = () => {
         </div>
       </Show>
       <Show when={!wasYesPressed()}>
-        <p class="text-4xl text-center text-white font-bold mb-2">
+        <p class="text-4xl text-center text-white font-bold mb-2 px-4">
           Me Quieres?
         </p>
 
@@ -135,10 +135,10 @@ const App = () => {
         </button>
       </Show>
 
-      <p class="text-4xl mt-4 text-center text-white font-bold mb-2">
+      <p class="text-4xl mt-4 text-center text-white font-bold mb-2 px-4">
         ¿Quieres Saber Cuánto Te Quiero?
       </p>
-      <p class="text-white text-center">
+      <p class="text-white text-center px-4">
         hay una forma de expresar lo que no se puede medir{' '}
         <span class="text-center text-red-300">(baja tanto como quieras)</span>
       </p>
