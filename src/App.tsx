@@ -1,6 +1,6 @@
 import bg from './assets/bg.png'
 import waveOne from './assets/wave-one.svg'
-import sticker from './assets/sticker.png'
+import sticker from './assets/cat.gif'
 
 import {observer, mensajes} from './hooks/tequieroinfinito'
 import {For, Show, createSignal, onMount} from 'solid-js'
@@ -78,7 +78,7 @@ const App = () => {
       </div>
 
       <Show when={wasYesPressed()}>
-        <div class="p-4 max-w-4xl mx-auto">
+        <div class="p-4 max-w-3xl mx-auto">
           <div class="flex justify-end mb-2">
             <div class="rounded-lg py-2 px-3" style="background-color: #015d4b">
               <p class="text-sm mt-1" style="color: #e5efec">
@@ -101,7 +101,7 @@ const App = () => {
           </div>
           <div class="flex justify-end mb-2">
             <div class="py-2">
-              <img src={sticker} />
+              <img src={sticker} class='w-40' />
               <p class="text-right text-xs mt-1" style="color: #838283">
                 {time()}
               </p>
